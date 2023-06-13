@@ -15,6 +15,7 @@ specifiers:
   tailwindcss: ^3.3.2
   vite: ^4.3.9
   vue: ^3.3.4
+  vue-material-design-icons: ^5.2.0
   vue-router: ^4.2.2
 
 dependencies:
@@ -22,6 +23,7 @@ dependencies:
   '@vueuse/components': 10.1.2_vue@3.3.4
   '@vueuse/core': 10.1.2_vue@3.3.4
   vue: 3.3.4
+  vue-material-design-icons: 5.2.0
   vue-router: 4.2.2_vue@3.3.4
 
 devDependencies:
@@ -1720,6 +1722,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /vue-material-design-icons/5.2.0:
+    resolution: {integrity: sha512-fcdcJHQ9fQw2CAytuLAzWSELcxH138sCdMItVhvmO7Lu9afIgojB/UCWv7XHt/lURsnq/n6O+muM4AQgw8yfig==}
+    dev: false
 
   /vue-router/4.2.2_vue@3.3.4:
     resolution: {integrity: sha512-cChBPPmAflgBGmy3tBsjeoe3f3VOSG6naKyY5pjtrqLGbNEXdzCigFUHgBvp9e3ysAtFtEx7OLqcSDh/1Cq2TQ==}
