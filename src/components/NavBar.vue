@@ -21,7 +21,7 @@ watch(route, () => {
 <template>
     <nav class="fixed top-0 z-50 w-full mx-auto text-white shadow-md shadow-primary/50 bg-secondary/90 backdrop-blur">
         <div class="flex items-center justify-between max-w-4xl px-4 mx-auto shadow-sm h-14">
-            <img @click="router.push({ name: 'home' })" src="../assets/Corn hub logo.png" alt="College Union Logo"
+            <img @click="router.push({ name: 'home' })" src="../assets/annan hub logo.png" alt="College Union Logo"
                 class="cursor-pointer h-7" />
             <!-- Hamburger Menu -->
             <div class="relative">
