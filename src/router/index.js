@@ -12,6 +12,11 @@ const router = createRouter({
       path: '/addannancontent',
       name: 'add-content',
       component: () =>import('../views/AddContentView.vue')
+    },
+    {
+      path: '/new',
+      name: 'new-content',
+      component: ()=>import('../views/SubmitContentView.vue')
     }
   ]
 })

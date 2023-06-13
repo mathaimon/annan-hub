@@ -19,7 +19,7 @@ watch(route, () => {
 </script>
 
 <template>
-    <nav class="fixed top-0 z-50 w-full mx-auto text-white shadow-md shadow-primary/50 bg-secondary/80 backdrop-blur">
+    <nav class="fixed top-0 z-50 w-full mx-auto text-white shadow-md shadow-primary/50 bg-secondary/90 backdrop-blur">
         <div class="flex items-center justify-between max-w-4xl px-4 mx-auto shadow-sm h-14">
             <img @click="router.push({ name: 'home' })" src="../assets/Corn hub logo.png" alt="College Union Logo"
                 class="cursor-pointer h-7" />
@@ -39,10 +39,9 @@ watch(route, () => {
                         <RouterLink
                             class="w-full px-3 py-2 transition-colors duration-100 ease-in-out rounded-md hover:bg-sechover"
                             :to="{ name: 'home' }">Home</RouterLink>
-                        <div
-                            class="w-full px-3 py-2 transition-colors duration-100 ease-in-out rounded-md hover:bg-sechover">
-                            Add Content
-                        </div>
+                        <RouterLink
+                            class="w-full px-3 py-2 transition-colors duration-100 ease-in-out rounded-md hover:bg-sechover"
+                            :to="{ name: 'new-content' }">Submit new Content</RouterLink>
                     </div>
                 </div>
             </div>
