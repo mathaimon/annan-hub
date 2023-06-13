@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import router from '../router';
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "@/firebase/firebase";
@@ -11,6 +11,9 @@ const contentViews = ref(0)
 const contentLike = ref(0)
 
 const isLoading = ref(false)
+const showPreview = computed(() => {
+    return contentUrl.value.trim() == "" ? false : true
+})
 
 const addNewContent = async () => {
     const newContent = {
@@ -30,14 +33,19 @@ const addNewContent = async () => {
         <h1 class="mt-5 mb-3 text-4xl font-semibold">Add Content</h1>
         <form @submit.prevent="addNewContent">
             <div class="flex flex-col p-4 mt-5 rounded-xl bg-secondary">
+                <!-- Url -->
+                <div class="text-lg">Image Url</div>
+                <input required v-model="contentUrl" placeholder="Enter the image url for the content"
+                    class="w-full h-10 px-3 mt-1 rounded-md outline outline-accent/70 outline-1 bg-secondary" />
+                <!-- Image Preview -->
+                <div class="flex flex-col p-2 mt-5 rounded-md outline outline-accent/70 outline-1" v-if="showPreview">
+                    <p class="mb-2 text-neutral-300">Image Preview</p>
+                    <img :src="contentUrl" class="rounded-md object-center h-[14rem] object-cover w-full">
+                </div>
                 <!-- Content Title -->
-                <div class="text-lg">Title</div>
+                <div class="mt-5 text-lg">Title</div>
                 <input required v-model="contentTitle" placeholder="Enter an appropriate title for the content"
                     class="w-full h-10 px-3 mt-1 rounded-md outline outline-accent/70 outline-1 bg-secondary" type="text" />
-                <!-- Url -->
-                <div class="mt-5 text-lg">Image Url</div>
-                <input required v-model="contentUrl"
-                    class="w-full h-10 px-3 mt-1 rounded-md outline outline-accent/70 outline-1 bg-secondary" />
                 <div class="mt-5 text-lg">Views</div>
                 <input required v-model="contentViews" type="number" placeholder="000,000"
                     class="w-full h-10 px-3 mt-1 rounded-md outline outline-accent/70 outline-1 bg-secondary" />
