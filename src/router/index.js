@@ -17,6 +17,11 @@ const router = createRouter({
       path: '/new',
       name: 'new-content',
       component: ()=>import('../views/SubmitContentView.vue')
+    },
+    {
+      path:'/subscribe',
+      name: 'subscribe',
+      component: ()=>import('../views/SubscribeView.vue')
     }
   ]
 })

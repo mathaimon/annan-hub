@@ -42,6 +42,9 @@ watch(route, () => {
                         <RouterLink
                             class="w-full px-3 py-2 transition-colors duration-100 ease-in-out rounded-md hover:bg-sechover"
                             :to="{ name: 'new-content' }">Submit new Content</RouterLink>
+                        <RouterLink
+                            class="w-full px-3 py-2 transition-colors duration-100 ease-in-out rounded-md hover:bg-sechover"
+                            :to="{ name: 'subscribe' }">Subscribe</RouterLink>
                     </div>
                 </div>
             </div>
