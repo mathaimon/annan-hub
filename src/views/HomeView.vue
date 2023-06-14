@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted, ref } from "vue";
+import { RouterLink } from "vue-router";
 import { db } from "@/firebase/firebase"
 import { collection, onSnapshot } from "firebase/firestore"
 import LoadingIcon from "vue-material-design-icons/Loading.vue"
@@ -42,6 +43,15 @@ onMounted(() => {
     <!-- Announcement Card -->
     <div class="flex flex-col gap-4 mt-4" v-if="!isLoading">
       <ContentCard v-for="content in contents" :key="content.id" :content="content" />
+    </div>
+    <div class="flex flex-col items-center mt-10">
+      <p class="mb-4 text-xl font-semibold">Missing Something...?</p>
+      <RouterLink :to="{ name: 'new-content' }">
+        <button
+          class="px-8 py-3 font-semibold bg-secondary outline outline-1 outline-accent rounded-xl text-accent">Submit
+          New Content
+        </button>
+      </RouterLink>
     </div>
   </div>
 </template>
