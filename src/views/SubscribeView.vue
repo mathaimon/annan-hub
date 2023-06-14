@@ -25,7 +25,7 @@ const toggleQr = () => {
                 <li>and more...</li>
             </ul>
             <div class="mt-10" v-if="showQr">
-                <img src="../assets/subscription qr.png" class="px-8 rounded-md" alt="payment qr code">
+                <img src="https://i.imgur.com/ds6Jj4B.png" class="px-8 rounded-md" alt="payment qr code">
                 <div class="mt-3 text-xl font-semibold text-center">Scan QR to Pay</div>
             </div>
             <div class="flex justify-center mt-10">
