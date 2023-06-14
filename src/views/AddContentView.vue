@@ -54,7 +54,7 @@ const addNewContent = async () => {
                     class="w-full h-10 px-3 mt-1 mb-5 rounded-md outline outline-accent/70 outline-1 bg-secondary" />
             </div>
             <!-- Warning Dialog Box -->
-            <div class="flex w-full p-4 mt-5 rounded-lg bg-secondary" v-if="!isLoading">
+            <div class="flex w-full p-4 mt-5 rounded-lg bg-secondary" v-if="isLoading">
                 <div class="w-6 mr-5 animate-spin">
                     <LoadingIcon fillColor="#FFA31A" />
                 </div>
