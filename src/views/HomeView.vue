@@ -40,7 +40,7 @@ onMounted(() => {
       </p>
     </div>
     <!-- Announcement Card -->
-    <div class="flex flex-col gap-4 mt-4" :class="{ 'hidden': isLoading }">
+    <div class="flex flex-col gap-4 mt-4" v-if="!isLoading">
       <ContentCard v-for="content in contents" :key="content.id" :content="content" />
     </div>
   </div>
